@@ -1,3 +1,5 @@
 # Item-Lister
-Run on JS Bin.\
-Make sure to change script attribute 'src' accordingly in the Item-Lister.html file.
+<ol>
+<li>Run on JS Bin.</li>
+  <li>Make sure to change script attribute <b>src</b> accordingly in the <b>Item-Lister.html</b> file.</li>
+</ol>
