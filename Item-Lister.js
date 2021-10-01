@@ -37,3 +37,11 @@ items[2].style.color = "white";
 for(let i=0; i<items.length; i++){
   items[i].style.fontWeight = "bold";
 }
+
+// #3 getElementsByTagName();
+
+//items[4].textContent = "I am item 5"; //throwing an error!
+
+var li = document.getElementsByTagName('li');
+console.log(li[4]);
+li[4].textContent = "I am item no. 5";
