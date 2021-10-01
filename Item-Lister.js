@@ -45,3 +45,27 @@ for(let i=0; i<items.length; i++){
 var li = document.getElementsByTagName('li');
 console.log(li[4]);
 li[4].textContent = "I am item no. 5";
+
+// #4 querySelector();
+var insertBox = document.querySelector('.insert-box');
+console.log(insertBox);
+insertBox.placeholder = "Enter Item No.";
+
+var secondItem = document.querySelector('.list-item:nth-child(2)');
+console.log(secondItem);
+secondItem.style.backgroundColor = 'green';
+secondItem.style.color = 'white';
+
+var thirdItem = document.querySelector('.list-item:nth-child(3)');
+thirdItem.style.visibility = "hidden";
+
+// #5 querySelectorAll();
+var _secondItem = document.querySelectorAll('.list-item');
+_secondItem[1].style.color = "green";
+_secondItem[1].style.backgroundColor = "white";
+
+var odd = document.querySelectorAll('li:nth-child(odd)');
+thirdItem.style.visibility = "visible";
+for(let i=0; i<li.length; i++){
+  odd[i].style.backgroundColor = "green";
+}
