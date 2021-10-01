@@ -1,0 +1,48 @@
+.broad-green-strip{
+  color: white;
+  background-color: hsl(141, 82%, 29%);
+  padding: 18px;
+  font-family: 'Open Sans', sans-serif;  
+}
+
+.title-on-green-strip{
+  margin: 0px 0px 0px 20px;
+}
+
+.surrounding-border{
+  padding: 0px -10px 0px 0px;
+  border: solid #ccc 0.1px;
+  margin: 20px 0px 0px 35px;
+}
+
+.title-and-form{
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px 0px 0px 40px;
+}
+
+.insert-box{
+  padding: 6px 6px 6px 6px;
+}
+
+.submit-button{
+  color: white;
+  background-color: #333333;
+  padding: 10px 10px 10px 10px;
+  border: solid #333333 0px;
+  width: 75px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sub-title{
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px 0px 0px 40px;
+}
+
+.list-item{
+  width: 565px;
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px;
+  border: solid #ccc 0.1px;
+}
