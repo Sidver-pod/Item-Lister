@@ -69,3 +69,68 @@ thirdItem.style.visibility = "visible";
 for(let i=0; i<li.length; i++){
   odd[i].style.backgroundColor = "green";
 }
+
+/*------------------------------PARENT-CHILD-SIBLING-----------------------------*/
+// #6 parentNode
+var itemList = document.querySelector('#list');
+//console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor = "#f4f4f4";
+
+// #7 parentElement (exactly the same as parentNode)
+itemList.parentElement.style.backgroundColor = "white";
+
+// #8 childNodes (not recommended!)
+// console.log(itemList.childNodes);
+
+// #9 children
+//console.log(itemList.children);
+//console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor = "yellow";
+
+// #10 firstChild (not recommended!)
+//console.log(itemList.firstChild);
+
+// #11 firstElementChild
+//console.log(itemList.firstElementChild);
+itemList.firstElementChild.innerText = "Hello 1";
+
+// #12 lastChild (N/R)
+//console.log(itemList.lastChild);
+
+// #13 lastElementChild
+itemList.lastElementChild.innerText = "Hello 5";
+
+// #14 nextSibling (N/R)
+//console.log(itemList.nextSibling);
+
+// #15 nextElementSibling
+console.log(itemList.nextElementSibling);
+
+// #16 previousSibling (N/R)
+// console.log(itemList.previousSibling);
+
+// #17 previousElementSibling
+// console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color = "pink";
+
+/*----------------CREATE ELEMENT - ADD ATTRIBUTES - INSERT ELEMENT---------------*/
+// #18 createElement();
+var newDiv = document.createElement('div'); //create a div
+newDiv.className = "hello"; //className added
+newDiv.id = "hello_1"; //id added
+
+// #19 setAttribute();
+newDiv.setAttribute('title', 'Hello Div'); //title added
+
+// #20 createTextNode();
+var newDivText = document.createTextNode('Hello World'); //create a text node
+
+// #21 appendChild();
+newDiv.appendChild(newDivText); // text added 
+
+console.log(newDiv);
+
+// #22 insertBefore();
+var header = document.querySelector('header .broad-green-strip');
+var h1 = document.querySelector('header h1');
+header.insertBefore(newDiv, h1);
