@@ -146,20 +146,33 @@ function addItem(e){
   
   const storeInput = document.querySelector('.insert-box').value;
   
-  //creating new list element
+  //creating new list element [#1]
   var li = document.createElement('li');
   li.innerText = storeInput;
   li.className = 'list-item';
   
-  //creating new button X
+  //creating new span element [#2]
+  var span = document.createElement('span');
+  span.className = 'e-d-butns';
+  
+  //creating new button X [#3]
   var newButton = document.createElement('button');
   newButton.innerText  = 'X';
   newButton.className = 'cross';
+  //making [new button X] a child of the [new span element]
+  span.appendChild(newButton);
   
-  //making [new button X] a child of the [new list element]
-  li.appendChild(newButton);
+  //creating new button 'edit' [#4]
+  var editButn = document.createElement('button');
+  editButn.innerText = "edit";
+  editButn.className = "edit";
+  //making [new button 'edit'] a child of the [new span element]
+  span.appendChild(editButn);
   
-  //making [new list element] a child of list_Element 
+  //making [span] a child of [new list element] [#5]
+  li.appendChild(span);
+  
+  //making [new list element] a child of list_Element [#6]
   list_Element.appendChild(li);
   
   //EXTRA [clearing out the input box after submission!]
@@ -172,7 +185,7 @@ function deleteItem(e){
   //target is what gets clicked in the given 'event', i.e. [e]
   //another explanation: [e.target] is the <li> element that gets clicked!
   if(e.target.className == 'cross'){
-    e.target.parentElement.remove(); //delete the parent of the cross, i.e. li element!
+    e.target.parentElement.parentElement.remove(); //delete the parent of span (edit & cross are the children of span), i.e. li element!
   }
 }
 
