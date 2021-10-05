@@ -34,6 +34,11 @@
   border-radius: 5px;
 }
 
+.submit-button:hover{
+  background-color: hsl(0,0%,25%);
+  border: solid hsl(0,0%,25%) 0px;
+}
+
 .sub-title{
   font-family: 'Open Sans', sans-serif;
   margin: 20px 0px 0px 40px;
@@ -60,4 +65,34 @@
   text-align: center;
   position: relative;
   top: -3.5px;
+}
+
+.cross:hover{
+  color: white;
+  background-color: hsl(348, 83.3%, 52%);
+  border: solid 1px hsl(348, 83.3%, 52%);
+}
+
+.edit{
+  color: orange;
+  background-color: white;
+  padding: 0px 0px 0px 0px;
+  border: solid 1px orange;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  position: relative;
+  top: -3.5px;
+  right: 3px;
+}
+
+.edit:hover{
+  color: white;
+  background-color: orange;
+}
+
+.e-d-butns{
+  float: right;
 }
