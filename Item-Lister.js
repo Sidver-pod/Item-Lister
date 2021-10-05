@@ -1,4 +1,4 @@
-//console.log(document);
+/*//console.log(document);
 //console.log(document.URL);
 //console.log(document.title);
 // document.title = 123;
@@ -69,9 +69,9 @@ thirdItem.style.visibility = "visible";
 for(let i=0; i<li.length; i++){
   odd[i].style.backgroundColor = "green";
 }
-
+*/
 /*------------------------------PARENT-CHILD-SIBLING-----------------------------*/
-// #6 parentNode
+/*// #6 parentNode
 var itemList = document.querySelector('#list');
 //console.log(itemList.parentNode);
 itemList.parentNode.style.backgroundColor = "#f4f4f4";
@@ -112,9 +112,9 @@ console.log(itemList.nextElementSibling);
 // #17 previousElementSibling
 // console.log(itemList.previousElementSibling);
 itemList.previousElementSibling.style.color = "pink";
-
+*/
 /*----------------CREATE ELEMENT - ADD ATTRIBUTES - INSERT ELEMENT---------------*/
-// #18 createElement();
+/*// #18 createElement();
 var newDiv = document.createElement('div'); //create a div
 newDiv.className = "hello"; //className added
 newDiv.id = "hello_1"; //id added
@@ -134,3 +134,46 @@ console.log(newDiv);
 var header = document.querySelector('header .broad-green-strip');
 var h1 = document.querySelector('header h1');
 header.insertBefore(newDiv, h1);
+*/
+/*----------------------------------ADD & DELETE---------------------------------*/
+var form = document.querySelector('#form-one');
+var list_Element = document.querySelector('#list');
+
+form.addEventListener('submit', addItem);
+
+function addItem(e){
+  e.preventDefault();
+  
+  const storeInput = document.querySelector('.insert-box').value;
+  
+  //creating new list element
+  var li = document.createElement('li');
+  li.innerText = storeInput;
+  li.className = 'list-item';
+  
+  //creating new button X
+  var newButton = document.createElement('button');
+  newButton.innerText  = 'X';
+  newButton.className = 'cross';
+  
+  //making [new button X] a child of the [new list element]
+  li.appendChild(newButton);
+  
+  //making [new list element] a child of list_Element 
+  list_Element.appendChild(li);
+  
+  //EXTRA [clearing out the input box after submission!]
+  document.querySelector('.insert-box').value = "";
+}
+
+//DELETE [using X button]
+function deleteItem(e){
+  e.preventDefault();
+  //target is what gets clicked in the given 'event', i.e. [e]
+  //another explanation: [e.target] is the <li> element that gets clicked!
+  if(e.target.className == 'cross'){
+    e.target.parentElement.remove(); //delete the parent of the cross, i.e. li element!
+  }
+}
+
+list_Element.addEventListener('click', deleteItem);
